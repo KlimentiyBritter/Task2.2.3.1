@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 @Repository
-public class UserDaoHiberImpl implements UserDaoHiber{
+public class UserDaoHiberImpl implements UserDaoHider {
     @PersistenceContext
     private EntityManager manager;
     @Override

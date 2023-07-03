@@ -34,7 +34,7 @@ public class AppConfig {
         dataSource.setPassword(env.getProperty("db.password"));
         return dataSource;
     }
-
+//
     @Bean
     public LocalSessionFactoryBean getSessionFactory() {
         LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
