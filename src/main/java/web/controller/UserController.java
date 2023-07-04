@@ -38,7 +38,7 @@ public class UserController {
         userDAOService.save(user);
         return "redirect:/users";       //Переход на страницу списка
     }
-    @GetMapping("/{id}/edit")
+    @GetMapping("/id/edit")
     public String edit(@RequestParam("id") int id, Model model){
         User user = userDAOService.read(id);
         model.addAttribute("user", user);
@@ -49,7 +49,7 @@ public class UserController {
         userDAOService.update(id, user);
         return "redirect:/users";
     }
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/id")
     public String delete(@RequestParam("id") int id) {
         userDAOService.delete(id);
         return "redirect:/users";
