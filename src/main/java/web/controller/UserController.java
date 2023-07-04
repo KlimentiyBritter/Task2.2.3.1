@@ -22,7 +22,7 @@ public class UserController {
         model.addAttribute("users", userDAOService.index());
         return "user/index";
     }
-    @GetMapping("/{id}")
+    @GetMapping("/id")
     public String read(@RequestParam("id") int id, Model model){
         //Получим одного человека по ИД из ДАО и передадим на отображение в представление
         User user = userDAOService.read(id);
