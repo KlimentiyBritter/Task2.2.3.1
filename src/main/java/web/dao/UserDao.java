@@ -4,7 +4,7 @@ import web.model.User;
 
 import java.util.List;
 
-public interface UserDaoHider {
+public interface UserDao {
     List<User> getListOfUsers();
     void create(User user);
     User readUserById(int id);

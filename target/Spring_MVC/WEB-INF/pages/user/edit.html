@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <title>Update User</title>
 </head>
-    <body>
-    <form th:method="POST" th:action="@{/users/edit}" th:object="${user}">
-<!--    <form th:method="PATCH" th:action="@{/users(id=${user.getId()})}" th:object="${user}">-->
-        <label for="name">Enter name: </label>
-        <input type="text" th:field="*{name}" id="name"/>
-        <br/>
-        <label for="surname">Enter surname: </label>
-        <input type="text" th:field="*{surname}" id="surname"/>
-        <br/>
-        <label for="email">Enter email: </label>
-        <input type="text" th:field="*{email}" id="email"/>
-        <br/>
-        <button type="submit" value="Update">Update</button>
-    </form>
+<body>
+<form th:method="PATCH" th:action="@{/users/{id}(id=${user.getId()})}" th:object="${user}">
+    <label for="name">Enter name: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <br/>
+    <label for="surname">Enter surname: </label>
+    <input type="text" th:field="*{surname}" id="surname"/>
+    <br/>
+    <label for="email">Enter email: </label>
+    <input type="text" th:field="*{email}" id="email"/>
+    <br/>
+    <button type="submit" value="Update">Update</button>
+</form>
 </body>
 </html>
